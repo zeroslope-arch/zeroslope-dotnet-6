@@ -26,10 +26,10 @@ namespace ZeroSlope.Api.Container
 			new AutoMapperInstaller(new MapperConfigurationExpression() { })
 				.Install(serviceCollection);
 
-            new RedisInstaller(_options.Caching.RedisHost, _options.Caching.RedisPort, _options.Caching.RedisDatabaseId)
-                .Install(serviceCollection);
+            		new RedisInstaller(_options.Caching.RedisHost, _options.Caching.RedisPort, _options.Caching.RedisDatabaseId)
+                		.Install(serviceCollection);
 
-            serviceCollection.Scan(scan => new IServiceInstaller(typeof(Domain.Init)).Install(scan));
+            		serviceCollection.Scan(scan => new IServiceInstaller(typeof(Domain.Init)).Install(scan));
 		}
 	}
 }
