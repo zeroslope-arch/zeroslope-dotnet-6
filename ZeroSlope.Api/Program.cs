@@ -3,9 +3,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
 builder.Configuration.AddEnvironmentVariables();
 
-var settings = builder.Configuration.Get<ContainerOptions>();
-builder.Services.AddSingleton<ContainerOptions>(settings);
-new ContainerInstaller(settings).Install(builder.Services);
+var settings = builder.Configuration.Get<ContainerSettings>();
+builder.Services.AddSingleton<ContainerSettings>(settings);
+new ContainerSetup(settings).Install(builder.Services);
 
 builder.Services.AddSingleton<ITokenService>(new TokenService());
 builder.Services.AddAuthorization();

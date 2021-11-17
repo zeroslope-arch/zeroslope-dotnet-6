@@ -28,10 +28,6 @@ Coming soon.
 ```
 ├─── 📁 Documentation
 │   
-├─── 📁 Infrastructure
-│   ├─── #️ ZeroSlope.Composition
-│   └─── #️ ZeroSlope.Infrastructure
-│   
 ├─── 📁 Testing
 │   ├─── #️ ZeroSlope.Api.Tests
 │   └─── #️ ZeroSlope.Domain.Tests

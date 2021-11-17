@@ -1,7 +1,7 @@
 ﻿using ZeroSlope.Domain.Services;
-using ZeroSlope.Infrastructure.Exceptions;
 using ZeroSlope.Models.Sample.Requests;
 using ZeroSlope.Models.Sample.Responses;
+using ZeroSlope.Packages.DotNet.Exceptions;
 
 namespace ZeroSlope.Api.Routes
 {

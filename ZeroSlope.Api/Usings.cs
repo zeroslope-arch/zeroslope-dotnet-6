@@ -1,14 +1,11 @@
 ﻿global using System;
 global using System.Text;
 global using Microsoft.OpenApi.Models;
-global using ZeroSlope.Composition.Installers;
+global using ZeroSlope.Api.Container;
+global using ZeroSlope.Domain.Interfaces;
+global using ZeroSlope.Domain.Services;
 global using ZeroSlope.Api.Routes;
 global using ZeroSlope.Api.Middleware;
-global using ZeroSlope.Composition;
-global using ZeroSlope.Infrastructure.Authentication;
-global using ZeroSlope.Infrastructure.Interfaces;
-global using System.Security.Claims;
 global using Microsoft.IdentityModel.Tokens;
-global using System.IdentityModel.Tokens.Jwt;
 global using Microsoft.AspNetCore.Authentication.JwtBearer;
 global using Microsoft.AspNetCore.Authorization;

@@ -7,11 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ZeroSlope.Domain.Base;
-using ZeroSlope.Infrastructure.Interfaces;
+using ZeroSlope.Domain.Interfaces;
+using ZeroSlope.Packages.DotNet.IService;
 
 namespace ZeroSlope.Domain.Services
 {
-    public class AuthService : BaseService
+    public class AuthService : CoreService, IService
     {
         private readonly ITokenService _tokenService;
 

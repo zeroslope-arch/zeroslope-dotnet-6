@@ -12,11 +12,18 @@
     <PackageReference Include="Serilog.Sinks.Console" Version="4.0.0" />
     <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+    <PackageReference Include="ZeroSlope.Packages.DotNet.AutoMapper" Version="1.0.0" />
+    <PackageReference Include="ZeroSlope.Packages.DotNet.IDbConnection" Version="1.0.0" />
+    <PackageReference Include="ZeroSlope.Packages.DotNet.IService" Version="1.0.0" />
+    <PackageReference Include="ZeroSlope.Packages.DotNet.Serilogger" Version="1.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\ZeroSlope.Domain\ZeroSlope.Domain.csproj" />
-    <ProjectReference Include="..\ZeroSlope.Infrastructure\ZeroSlope.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Installers\" />
   </ItemGroup>
 
 </Project>

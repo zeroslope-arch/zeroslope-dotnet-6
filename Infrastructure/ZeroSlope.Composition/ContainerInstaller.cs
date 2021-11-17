@@ -1,9 +1,13 @@
 ﻿using Scrutor;
-using ZeroSlope.Infrastructure.Interfaces;
 using ZeroSlope.Composition.Installers;
 using System;
 using System.Collections.Generic;
 using Microsoft.Extensions.DependencyInjection;
+using ZeroSlope.Packages.DotNet.IService.Installers;
+using ZeroSlope.Packages.DotNet.Redis.Installers;
+using ZeroSlope.Packages.DotNet.AutoMapper.Installers;
+using AutoMapper.Configuration;
+using ZeroSlope.Packages.DotNet.Serilogger.Installers;
 
 namespace ZeroSlope.Composition
 {
@@ -18,11 +22,19 @@ namespace ZeroSlope.Composition
 
 		public void Install(IServiceCollection serviceCollection)
 		{
-			new LoggerInstaller(_options).Install(serviceCollection);
-			new IDbConnectionInstaller(_options).Install(serviceCollection);
-			new MapperInstaller(_options).Install(serviceCollection);
+			new SeriloggerInstaller()
+				.Install(serviceCollection);
 
-			serviceCollection.Scan(scan => new ServiceInstaller(_options).Install(scan));
+			new IDbConnectionInstaller(_options.Database.SqlConnectionString)
+				.Install(serviceCollection);
+
+			new AutoMapperInstaller(new MapperConfigurationExpression() { })
+				.Install(serviceCollection);
+
+			new RedisInstaller(_options.Caching.RedisHost, _options.Caching.RedisPort, _options.Caching.RedisDatabaseId)
+				.Install(serviceCollection);
+
+			serviceCollection.Scan(scan => new IServiceInstaller(typeof(Domain.Init)).Install(scan));
 		}
 	}
 }

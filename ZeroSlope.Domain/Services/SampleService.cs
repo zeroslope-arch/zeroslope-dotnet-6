@@ -4,17 +4,18 @@ using System.Text;
 using AutoMapper;
 using System.Data;
 using Serilog;
-using ZeroSlope.Infrastructure.Exceptions;
 using ZeroSlope.Domain.Base;
 using System.Linq;
 using ZeroSlope.Domain.Entities;
 using Dapper.Contrib.Extensions;
 using ZeroSlope.Models.Sample.Responses;
 using ZeroSlope.Models.Sample.Requests;
+using ZeroSlope.Packages.DotNet.IService;
+using ZeroSlope.Packages.DotNet.Exceptions;
 
 namespace ZeroSlope.Domain.Services
 {
-	public class SampleService : BaseService
+	public class SampleService : CoreService, IService
 	{
 		private IDbConnection Connection;
 

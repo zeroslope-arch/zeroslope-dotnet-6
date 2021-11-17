@@ -1,4 +1,4 @@
-﻿using ZeroSlope.Infrastructure.Exceptions;
+﻿using ZeroSlope.Packages.DotNet.Exceptions;
 
 namespace ZeroSlope.Api.Routes
 {

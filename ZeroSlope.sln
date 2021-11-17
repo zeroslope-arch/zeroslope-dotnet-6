@@ -7,12 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZeroSlope.Api", "ZeroSlope.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZeroSlope.Domain", "ZeroSlope.Domain\ZeroSlope.Domain.csproj", "{8CAB5491-880D-40CF-8096-93BEF165DBA3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZeroSlope.Composition", "Infrastructure\ZeroSlope.Composition\ZeroSlope.Composition.csproj", "{BA50A30E-9530-4E6D-9228-0883D6C6F2F8}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZeroSlope.Infrastructure", "Infrastructure\ZeroSlope.Infrastructure\ZeroSlope.Infrastructure.csproj", "{4459E612-FF4A-49BD-AC71-693FE07F1720}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{8E3718F7-1B1F-4A66-88D1-72AAA67CE9DF}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{86204987-86DB-4CE4-A321-39B6FE3EBEC5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{282CD8BB-CE27-470F-8925-3DB48B55FE7D}"
@@ -27,7 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZeroSlope.Domain.Tests", "T
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZeroSlope.Api.Tests", "Testing\ZeroSlope.Api.Tests\ZeroSlope.Api.Tests.csproj", "{35A1D85D-59D8-4B61-8932-FCD07BACA3F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZeroSlope.Models", "ZeroSlope.Models\ZeroSlope.Models.csproj", "{802BACAD-A296-4C2D-A8A9-DB1711586ECA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZeroSlope.Models", "ZeroSlope.Models\ZeroSlope.Models.csproj", "{802BACAD-A296-4C2D-A8A9-DB1711586ECA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,14 +37,6 @@ Global
 		{8CAB5491-880D-40CF-8096-93BEF165DBA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8CAB5491-880D-40CF-8096-93BEF165DBA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8CAB5491-880D-40CF-8096-93BEF165DBA3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BA50A30E-9530-4E6D-9228-0883D6C6F2F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BA50A30E-9530-4E6D-9228-0883D6C6F2F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BA50A30E-9530-4E6D-9228-0883D6C6F2F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BA50A30E-9530-4E6D-9228-0883D6C6F2F8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4459E612-FF4A-49BD-AC71-693FE07F1720}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4459E612-FF4A-49BD-AC71-693FE07F1720}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4459E612-FF4A-49BD-AC71-693FE07F1720}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4459E612-FF4A-49BD-AC71-693FE07F1720}.Release|Any CPU.Build.0 = Release|Any CPU
 		{34A450E7-8886-4C82-9FD6-5BDBF9460930}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{34A450E7-8886-4C82-9FD6-5BDBF9460930}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34A450E7-8886-4C82-9FD6-5BDBF9460930}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
@@ -74,8 +60,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{BA50A30E-9530-4E6D-9228-0883D6C6F2F8} = {8E3718F7-1B1F-4A66-88D1-72AAA67CE9DF}
-		{4459E612-FF4A-49BD-AC71-693FE07F1720} = {8E3718F7-1B1F-4A66-88D1-72AAA67CE9DF}
 		{A04D3261-38FF-4CAD-8159-6FBC809F4963} = {86204987-86DB-4CE4-A321-39B6FE3EBEC5}
 		{35A1D85D-59D8-4B61-8932-FCD07BACA3F7} = {86204987-86DB-4CE4-A321-39B6FE3EBEC5}
 	EndGlobalSection

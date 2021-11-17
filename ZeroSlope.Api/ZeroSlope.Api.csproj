@@ -17,10 +17,13 @@
     <PackageReference Include="Scrutor" Version="3.3.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.14.1" />
+    <PackageReference Include="ZeroSlope.Packages.DotNet.AutoMapper" Version="1.0.0" />
+    <PackageReference Include="ZeroSlope.Packages.DotNet.Exceptions" Version="1.0.0" />
+    <PackageReference Include="ZeroSlope.Packages.DotNet.IDbConnection" Version="1.0.0" />
+    <PackageReference Include="ZeroSlope.Packages.DotNet.Serilogger" Version="1.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Infrastructure\ZeroSlope.Composition\ZeroSlope.Composition.csproj" />
     <ProjectReference Include="..\ZeroSlope.Domain\ZeroSlope.Domain.csproj" />
     <ProjectReference Include="..\ZeroSlope.Models\ZeroSlope.Models.csproj" />
   </ItemGroup>
