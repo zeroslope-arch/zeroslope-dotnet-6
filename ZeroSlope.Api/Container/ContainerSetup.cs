@@ -26,8 +26,13 @@ namespace ZeroSlope.Api.Container
 			new AutoMapperInstaller(new MapperConfigurationExpression() { })
 				.Install(serviceCollection);
 
-            new RedisInstaller(_options.Caching.RedisHost, _options.Caching.RedisPort, _options.Caching.RedisDatabaseId)
-                .Install(serviceCollection);
+			if (_options.Caching.Enabled)
+			{
+				// Redis requires connectivity when creating the connection,
+				// so lets add a toggle here.
+				new RedisInstaller(_options.Caching.RedisHost, _options.Caching.RedisPort, _options.Caching.RedisDatabaseId)
+					.Install(serviceCollection);
+            }
 
             serviceCollection.Scan(scan => new IServiceInstaller(typeof(Domain.Init)).Install(scan));
 		}

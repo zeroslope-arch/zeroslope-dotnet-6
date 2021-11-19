@@ -31,6 +31,7 @@
 
 		public class CachingSettings
 		{
+			public bool Enabled { get; set; }
 			public string RedisHost { get; set; }
 			public int RedisPort { get; set; }
 			public int RedisDatabaseId { get; set; }
