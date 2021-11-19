@@ -32,9 +32,9 @@ namespace ZeroSlope.Api.Container
 				// so lets add a toggle here.
 				new RedisInstaller(_options.Caching.RedisHost, _options.Caching.RedisPort, _options.Caching.RedisDatabaseId)
 					.Install(serviceCollection);
-            }
+            		}
 
-            serviceCollection.Scan(scan => new IServiceInstaller(typeof(Domain.Init)).Install(scan));
+            		serviceCollection.Scan(scan => new IServiceInstaller(typeof(Domain.Init)).Install(scan));
 		}
 	}
 }
